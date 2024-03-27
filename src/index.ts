@@ -2,7 +2,7 @@
 import extractStyle from './extractStyle';
 import useCacheToken, {
   getComputedToken,
-  ThemeShim,
+  PollCacheToken,
 } from './hooks/useCacheToken';
 import useCSSVarRegister from './hooks/useCSSVarRegister';
 import type { CSSInterpolation, CSSObject } from './hooks/useStyleRegister';
@@ -36,7 +36,7 @@ export {
   Keyframes,
   extractStyle,
   getComputedToken,
-  ThemeShim,
+  PollCacheToken,
 
   // Transformer
   legacyLogicalPropertiesTransformer,

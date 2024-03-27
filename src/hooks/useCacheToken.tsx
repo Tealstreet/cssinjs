@@ -1439,7 +1439,7 @@ export default (...args: any[]) => {
   return cachedToken;
 };
 
-const ThemeShimHelper = () => {
+const PollCacheTokenHelper = () => {
   const [renderNonce, setRenderNonce] = useState(0);
   // @ts-ignore
   const res = useCacheTokenHelper(...cacheArgs);
@@ -1458,8 +1458,8 @@ const ThemeShimHelper = () => {
   return null;
 };
 
-export const ThemeShim = React.memo(() => {
+export const PollCacheToken = React.memo(() => {
   const [argUpdate, _setArgUpdate] = useState(0);
   setArgUpdate = _setArgUpdate;
-  return cacheArgs ? <ThemeShimHelper /> : null;
+  return cacheArgs ? <PollCacheTokenHelper /> : null;
 });
