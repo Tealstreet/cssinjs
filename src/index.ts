@@ -1,5 +1,9 @@
+'use client';
 import extractStyle from './extractStyle';
-import useCacheToken, { getComputedToken } from './hooks/useCacheToken';
+import useCacheToken, {
+  getComputedToken,
+  ThemeShim,
+} from './hooks/useCacheToken';
 import useCSSVarRegister from './hooks/useCSSVarRegister';
 import type { CSSInterpolation, CSSObject } from './hooks/useStyleRegister';
 import useStyleRegister from './hooks/useStyleRegister';
@@ -32,6 +36,7 @@ export {
   Keyframes,
   extractStyle,
   getComputedToken,
+  ThemeShim,
 
   // Transformer
   legacyLogicalPropertiesTransformer,
